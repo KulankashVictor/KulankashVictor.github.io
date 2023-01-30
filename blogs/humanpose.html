@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Victor Kulankash</title>
+        <link rel="stylesheet" href="../css/screen.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <link rel="shortcut icon" href="https://img.icons8.com/color/48/000000/vk-circled.png" type="image/x-icon" />
+
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Indie+Flower'>
+        <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="css/flexslider.css">
+        <link rel="stylesheet" href="css/services.css"
+
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+
+
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" 
+        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"/>
+    </head>        
+
+    <body class="home-template is-head-b--a_n has-serif-body" style="font-family: lato;">
+        <div class="gh-site">
+            <header id="gh-head" class="gh-head gh-outer">
+                <div class="gh-head-inner gh-inner">
+                    <a class="gh-head-description" href="../blogs.html">Technical Blogs</a>
+
+                    <div class="gh-head-brand">
+                        <div class="gh-head-brand-wrapper">
+                            <a class="gh-head-logo" href="https://kulankashvictor.github.io/">
+                                Kulankash Victor
+                            </a>
+                        </div>
+                        <button class="gh-burger"></button>
+                    </div>
+
+                    <nav class="gh-head-menu">
+                        <ul class="nav">
+                            <li><a href="https://kulankashvictor.github.io/">HomePage</a></li>
+                            <!-- <li class="dropdown">
+                                <button class="dropbtn">Posts
+                                  <i class="fa fa-caret-down"></i>
+                                </button>
+                                <div class="dropdown-content">
+                                  <a href="../nature.html">Nature</a>
+                                  <a href="../blogs.html">Technical Blogs</a>
+                                  <a href="../remarkable-men.html">Remarkable Men</a>
+                                </div>
+                            </li> -->
+                            <li><a href="../software_projects/index.html">Projects Done</a></li>
+                        </ul>
+
+                    </nav>
+                </div>
+            </header>
+
+
+            <main class="gh-main">
+                <article class="gh-article post tag-bayes">
+        
+                    <header class="gh-article-header gh-canvas">
+                        <p class="gh-article-tag"><b>Keywords:</b> Knee Flexion Angle, Human Pose, Machine Learning, Wearable Device</p>
+        
+                        <h1 class="gh-article-title";font-size = 24px >
+                            Knee Joint Flexion Angle Measurement using NVIDIA Jetson Nano
+                        </h1>
+        
+                        <aside class="gh-article-sidebar" style="position: fixed; padding: 50px; margin-top: -180px; font-size: 20px;">
+        
+                            <div class="gh-author-image-list">
+                                <a class="gh-author-image" href="#">
+                                <img src="img/passport.jpg" alt="auth.">
+                                </a>
+                            </div>
+        
+                            <div class="gh-author-name-list">
+                                <h4 class="gh-author-name">
+                                    <a href="https://KulankashVictor.github.io/">Victor Kulankash</a>
+                                </h4>                                    
+                            </div>
+        
+                            <div class="gh-article-meta">
+                                <div class="gh-article-meta-inner">
+                                    <time class="gh-article-date" datetime="2022-01-27">Jan 15, 2023</time>
+                                    <span class="gh-article-meta-sep"></span>
+                                    <span class="gh-article-length">5 min</span>
+                                </div>
+                            </div>
+                            <div class="contact">
+                                <span><i class="fas fa-envelope">&nbsp; victormoses998@gmail.com</i></span>
+                            </div>
+        
+                            <div class="gh-author-name">
+                                <a href="https://www.linkedin.com/in/kulankashvictor/"><i class="fab fa-linkedin"></i></a>
+                                &nbsp
+                                <a href="https://github.com/kulankashvictor/"><i class="fab fa-github"></i></a>
+                            </div>
+
+                            <div class="hidden-xs col-sm-4 col-md-3 sticky-menu">
+                                <div id="sidebar" class="tocify">
+                                <h1>Contents</h1>
+                                <ul id="tocify-header0" class="tocify-header nav nav-list">
+                                    <ul >
+                                        <li class="tocify-item" data-unique="Introduction" style="cursor: pointer;"><a href="#intro">Introduction</a>
+                                        </li>
+                                        <li class="tocify-item" data-unique="Objectives" style="cursor: pointer;"><a href="#objectives">Objectives</a>
+                                        </li>
+                                        <li class="tocify-item" data-unique="Human Pose Implementation" style="cursor: pointer;"><a href="#humanpose">Human Pose Implementation</a>
+                                        </li>
+                                        <li class="tocify-item" data-unique="Wearable Implementation" style="cursor: pointer;"><a href="#wearableimp">Wearable Implementation</a>
+                                        </li>
+                                        <li class="tocify-item" data-unique="Deployment" style="cursor: pointer;"><a href="#results">Deployment</a>
+                                        </li>
+                                        <li class="tocify-item" data-unique="Conclusion" style="cursor: pointer;"><a href="#conclusion">Conclusion</a>
+                                        </li>
+                                    </ul>
+                                </ul>
+                                </div>
+                            </div>
+                        </aside>
+
+
+                    </header>
+
+                    
+        
+                    <section class="gh-content gh-canvas">
+                        <h2 id="intro">Introduction</h2>
+
+                        <p>
+                            Computer vision is one of the main fields in Deep Learning and AI applications. There has been 
+                            a lot of work and research done in computer vision in the recent past and this has seen its applications 
+                            in various systems be it in object detection and classification (Tesla's self-driving AI), image segmentation, 
+                            face recognition (Facebook's DeepFace), Human Pose Estimation, among others, all of which utilize 
+                            Convolutional Neural Networks given the advantage that CNNs have in their unique capability of automatically
+                            learning features based on a given labeled dataset.
+                        </p>
+
+                        <p>
+                            In this paper, computer vision with machine learning is applied in real-time human pose estimation and monitoring 
+                            so as to be able to render the human gait from a real-time video stream captured by a camera and additionally 
+                            be able to obtain the flexion angle between any of the major joints of the human frame be it the knee, hip or the elbow.
+                        </p>
+
+                        <p>
+                            The main aim of this research is to help orthopedic specialists to know the extent of injury or recovery of patients
+                            with joint and ligament impairments with high accuracy and compare readings from the model developed to readings 
+                            obtained from a wearable knee flexion device utilizing a flex sensor such that there are two metrics of comparison 
+                            between the values obtained by the model and the values obtained by the wearable device in real-time.
+
+                        </p>
+
+                        
+                        <p>
+                            At the <a href="https://dekut-dsail.github.io/"
+                            target="_blank">Centre for Data Science and Artificial Intelligence (DSAIL)</a>, 
+                            <a href="https://www.dkut.ac.ke/"
+                            target="_blank">Dedan Kimathi University of Technology</a>, we have developed an <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit"
+                            target="_blank">NVIDIA Jetson Nano</a> based system that 
+                            is capable of processing real-time webcam video input and determining the angle of flexion at the knee or arm joints 
+                            while comparing the same angle measurement that obtained by a wearable flexion angle measurement device running on the same Jetson Nano.
+                        </p>
+
+                        <p>
+                            Currently, surgeons use <a href="https://www.ncbi.nlm.nih.gov/books/NBK558985/"
+                            target="_blank">Goniometers</a> and estimated passive observation to obtain 
+                            the knee joint's postoperative Range of Motion (ROM). Goniometers have shortcomings among them being highly prone to 
+                            human errors and being more invasive as too much contact is needed with the patient. 
+                            Other modern technologies used to conduct gait analysis and joint flexion measurements are expensive. 
+                            For example, ProtoKinetics, which is based in the US, have developed a Gait Analysis Software and have patented
+                            the Zeno Walkway Gait Analysis System [8] capable of providing meaningful data to clinicians and researchers, 
+                            although at an expensive fee due to the cost of development of their system and integration of expensively acquired 
+                            pressure and precision camera sensors. However, such solutions are hard to access especially for specialists and patients
+                            in low and middle-income countries (LMICs). As such, a need arises to develop effective but cost-friendly 
+                            and less invasive solutions that can accurately measure the joint flexion angle.
+                        </p>
+                        
+                        <p>
+                            In this research, we develop two methods of approximating the knee flexion angles and then conduct a comparative analysis
+                            of the two implementations with the aim of validating their performance. The wearable device estimates knee flexion angle
+                            using an Arduino Nano 33 BLE Sense and a flex sensor powered by a 3.7V LiPo battery. 
+                            The device is connected to a computer via Bluetooth Low Energy (BLE). The measured angle is recorded 
+                            in a real-time database, InfluxDB, from which we read and display the angles in a gauge plot hosted on a dash application. 
+                            The second implementation involves utilizing a machine learning framework called MediaPipe that is optimized 
+                            for real-time tracking of the human pose and features. The human pose model takes a live video stream as the input data 
+                            from a webcam and then identifies 32 mappable joints of the human frame. The model then appends a skeletal structure to 
+                            the mapped joints and tracks the position of each joint on each subsequent frame of the input video stream. 
+                            This enables us to derive the desired flexion angle between the targeted knee joint for a patient in motion 
+                            within the range of view of the webcam's image.
+
+                        </p>
+
+                        <h2 id="objectives">The Main Objectives</h2>
+                        <p>
+                            <ul>
+                                <li>
+                                    Developing the hardware and software of a wearable device for approximating knee joint flexion angle 
+                            and designing a computer vision based human pose model to simultaneously estimate the knee joint flexion angles from live video input.
+                                </li>
+                                <li>
+                                    Implementing the two methodologies to run on Nvidia's Jetson Nano for ease of deployment to remote areas.
+                            Drawing a comparison between the knee joint angles approximated by the wearable device versus those estimated by the human pose model.
+
+                                </li>
+                            </ul>
+                        </p>
+
+                        <h2>The Implementation</h2>
+                        <p>
+                            This measurement of the knee flexion angle is implemented in two ways, one is the human pose model which extracts
+                            the flexion angle utilizing computer vision and the other is the wearable device which measures the knee's flexion
+                            angle using a flex sensor attached to a wearable knee brace.
+                        </p>
+
+                    
+                        <h2 id="humanpose">The Human Pose Model</h2>
+
+                        <p>
+                            The Human pose model consists of the Jetson Nano as our primary microcontroller, running the human pose model algorithm,
+                            and the webcam which takes in the video input for processing so as to extract the knee flexion angle.
+                            With a human subject in the field of view of the webcam, the model is able to superimpose a skeleton over 
+                            the estimated human frame based on various landmarks of identifiable human features. 
+                            The model then identifies the targeted knee joint whose flexion angle we want to determine and consequently 
+                            determines the knee joint flexion angle based on the position of the hip and the ankle relative to the x and y axes of the frame. 
+                            Figure 1 shows how the hardware and software interact to measure the knee flexion angle.
+
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/humanposemodel.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 1: Architecture of the human pose model</p>
+
+                        
+                        <h3>
+                            Hardware Description
+                        </h3>
+
+                        <p>
+                            The hardware consists of a webcam and the <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit"
+                            target="_blank">Nvidia Jetson Nano. </a>
+                            The webcam is connected to the Jetson Nano to record a live video stream of the patient under observation 
+                            hence providing the input data for our model. The Jetson Nano is a small but powerful computer 
+                            that runs the human pose model which determines the knee flexion angle.  
+                            It runs the algorithm's pipeline and gives an output video stream with the measured  flexion angle at a frame rate of 10-15 fps 
+                            with a mild latency from the time the real-time video stream 
+                            is received to when the flexion angle is displayed and stored in the InfluxDB database.
+                        </p>
+
+                        <h4>i. The Nvidia Jetson Nano</h4>
+
+                        <p>
+                            The <a href="https://developer.nvidia.com/embedded/jetson-nano-developer-kit"
+                            target="_blank">Jetson Nano Development Kit</a> is a preferable choice for this implementation as it is an affordable 
+                            and accessible microcontroller that is capable of carrying out machine learning tasks while also 
+                            being capable of running deep learning and AI applications. 
+                            This is made possible by the fact that it integrates GPU cores (128 CUDA cores) in its processing architecture. 
+                            GPU cores are better in terms of running multi-dimensional parallel processing which is crucial 
+                            for machine learning applications and batch processing of real-time image data
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/JetsonNanoDevKit.jpg" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 1: The Jetson Nano </p>
+
+                        
+                        <h4>ii. Webcam</h4>
+
+                        <p>
+                            The USB webcam provides a means for our computer vision based human pose model to obtain real-time video stream input for
+                            processing such that it is able to superimpose a skeleton frame over the human subject in the webcam's field of view and concurently 
+                            determine the angle of flexion at the knee joint. 
+
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/logitech.webp" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 3: The Webcam </p>
+
+                        <h3>Software Description</h3>
+                        <p>
+                            The human pose machine learning solution utilizes a two-step detector-tracker machine learning pipeline 
+                            which has proven to be effective in accurately tracking the human pose. This human pose model is based on MediaPipe, 
+                            a cross-platform  and open-source machine learning framework to perform computer vision perception pipelines over 
+                            live video streams, images, or stream media.
+
+                        </p>
+
+                        <p>
+                            The model first locates the person's region of interest (ROI) within the input image frame. 
+                            Then the human pose detector part of the pipeline predicts the location of 33 pose landmarks of the human frame, 
+                            as shown in figure 6, and the segmentation mask within the detected ROI. The model was trained on a COCO dataset [14], 
+                            a large-scale object detection dataset that is optimized for detecting human beings and localization of a person's key 
+                            features in real-time.
+
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/poselandmarks.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 3: The human pose model landmarks to be captured. </p>
+
+
+                        
+                        <h2 id="wearableimp">The Wearable Device</h2>
+                        <p>
+                            The wearable device estimates knee flexion angle using the <a href="hhttps://docs.arduino.cc/hardware/nano-33-ble-sense"
+                            target="_blank">Arduino Nano BLE Sense </a> and a flex sensor powered by a 3.7V LiPo battery.
+                            The BLE sense and the flex sensor are attached to a wearble knee brace to capture the flexion angle from extenstion to when the knee joint is fully flexed.
+                            The device is connected to the Jetson Nano via Bluetooth Low Energy (BLE) signal. 
+                            The measured angle is recorded in a real-time database, InfluxDB, 
+                            from which we read and display the angles in a gauge plot hosted on a dash application.
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/wearablepipeline.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 3: The wearable device implementation architecture. </p>
+
+                        
+                        <h3>Hardware Description</h3>
+
+
+                        <h4>i. Arduino Nano BLE Sense.</h4>
+
+                        <p>
+                            The <a href="hhttps://docs.arduino.cc/hardware/nano-33-ble-sense"
+                            target="_blank">Arduino Nano BLE sense </a> is our choice of microcontroller for the independent wearble device
+                            because it combines a tiny form factor with an assortment of different environmental sensors and the possibility to run various
+                            AI implementations on a generally smaller footprint. The BLE sense is attached to the wearable knee flexion measuring device
+                            and takes an input of flexion angle from the flex sensor which is sent to an online database via the Jetson Nano.
+                    
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/arduinoble.webp" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 2: The Arduino Nano BLE Sense </p>
+
+                        <h3>Software Description</h3>
+    
+                        <p>
+                            The software is made up of three code components; an Arduino code and two python scripts. 
+                            One that writes the measured flexion angle to a time series database, InfluxDB, 
+                            and another that reads the flexion angles from InfluxDB. 
+                            The Arduino code processes data from the flex sensor and transmits the flexion angle 
+                            of the patient's knee. The writing script stores the transmitted angle in InfluxDB, 
+                            a time series database while the reading script queries the flexion angles from the database 
+                            and displays them on a real-time gauge plot.
+                            
+                        </p>
+
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/wearablepipeline.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 4: System architecture of the wearable device</p>
+                        
+    
+                                                
+    
+                        <h2 id="results"> Results of Deployment</h2>
+    
+                        <p>
+                            The two implementations were put to the test and the flexion angles obtained from the two methodologies were compared as shown in figures 7, 8, 9, and 10. 
+                            The knee brace embedded with the wearable device is worn by a subject and at the same time the subject positions himself within 
+                            the webcam's range of view to measure the knee flexion angle simultaneously using both implementations.
+                            We focused on three main positions of knee flexion; standing, seating, and squatting. The knee flexion angles obtained by both 
+                            implementations are then logged in real-time in an online database, InfluxDB for comparison. 
+                            Additionally, the implementations included local storage of flexion data in a CSV file which was then imported to a Jupyter Notebook for further analysis.
+                        </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/flexionstanding.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 3: Flexion angle when standing. </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/flexstandingtositting.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 4: Flexion Angle from standing to sitting. </p>
+
+                        <div class="blog-image blog-image2">
+                            <img src="img/flexdynamic.png" alt="Responsive image">
+                        </div>
+                        <p class="caption"> Figure 3: Flexion angles when in dynamic motion </p>
+    
+                        <h2 id="conclusion"> Conclusion</h2>
+    
+                        <p>
+                            The results above show a direct comparison between the knee flexion angles estimated by the 
+                            wearable device and the human pose model. Fig 7 is a graph showing the comparison of the two readings 
+                            while the subject is standing upright. As expected there is near zero flexion from both readings because 
+                            flexion of the joint is zero when the leg is fully extended. Fig 8 shows the results of the transition from 
+                            a standing position to a sitting position while  Fig 9 is a graph showing transition from a sitting position 
+                            to squatting (maximum flexion) and then back to the sitting position. When seated the expected angle of knee 
+                            flexion is around 80° - 90° and when squatting the expected angle of flexion is about 130° - 140°. 
+                            The final graph Fig 10 shows the comparison across the various positions tested on by both the wearable 
+                            device and the human pose model. The slight deviations observed can be attributed to approximation errors by 
+                            the implementations and inherent noise particularly with the human pose algorithm which continuously processes 
+                            a real time input video data stream on the Jetson and determines the human pose repeatedly based on the number 
+                            of input frames per second. 
+
+                        </p>
+
+                        <h3>References</h3>
+                    
+                        <p>
+                            <a id="ref1"><strong>[1]</strong></a> C. Desjonquères, S. Linke and T. Gifford, "Passive 
+                            acoustic monitoring as a potential tool to survey animal and ecosystem processes in 
+                            freshwater environments,"<em> Freshwater Biology, vol. 65, no. 1, pp. 7--19,</em> 2020.
+                        </p> 
+                        
+
+                        <p>
+                            <a id="ref2"><strong>[2]</strong></a>C. wa Maina, "Listening to the Mountain: Using Audio 
+                            Recorders to Monitor Forest Birds in Kenya, Nyeri,"<em> Medium,</em> 2017.
+                        </p>
+
+
+                        <h3>Publications</h3>
+
+                        <p>
+                            <strong>[1]</strong> V. Kulankash, A. Gitau, C. Maina "Comparison of Wearable and Computer Vision Based Approaches
+                            to Knee Flexion Angle Measurement" 
+                            <em>in 2022 IST-Africa Conference (IST-Africa),</em> 2022. <a class="pub-link" href="https://ieeexplore.ieee.org/">View</a>
+                        </p>
+
+                        
+                        
+
+                    </section>
+                </article>
+        
+                <!-- <div class="gh-read-next gh-canvas">
+                    <section class="gh-pagehead">
+                        <h4 class="gh-pagehead-title">Related articles</h4>
+                    </section>
+        
+                    <div class="gh-topic gh-topic-grid">
+                        <div class="gh-topic-content">                            
+        
+                            <article class="gh-card post">
+                                <a class="gh-card-link" href="bioacoustics.html">
+                                    <figure class="gh-card-image">
+                                        <img
+                                            sizes="(max-width: 1200px) 100vw, 1200px"
+                                            src="img/bioacoustics-cropped.jpg"
+                                            alt="DSAIL Bioacoustics System"
+                                        >
+                                    </figure>
+            
+                                    <div class="gh-card-wrapper">
+                                        <header class="gh-card-header">
+                                            <h3 class="gh-card-title">
+                                                Deploying 'Ears' in Ecosystems: Acoustic Monitoring of Birds
+                                            </h3>
+                                        </header>
+                            
+                                        <div class="gh-card-excerpt">
+                                            Listening to the wild.
+                                        </div>
+                            
+                                        <footer class="gh-card-footer">
+                                            <span class="gh-card-author">Gabriel Kiarie</span>
+                                            <time class="gh-card-date" datetime="2022-03-08">Dec 16, 2020</time>
+                                        </footer>
+                                    </div>
+                                </a>
+                            </article>
+
+                            <article class="gh-card post">
+                                <a class="gh-card-link" href="powering-the-raspberrypi.html">
+                                    <figure class="gh-card-image">
+                                        <img
+                                            sizes="(max-width: 1200px) 100vw, 1200px"
+                                            src="img/power-board.jpg"
+                                            alt="DSAIL Power Management Board"
+                                        >
+                                    </figure>
+            
+                                    <div class="gh-card-wrapper">
+                                        <header class="gh-card-header">
+                                            <h3 class="gh-card-title">DSAIL Power Management Board</h3>
+                                        </header>
+                            
+                                        <div class="gh-card-excerpt">
+                                            Powering the Raspberry Pi autonomously off-grid.
+                                        </div>
+                            
+                                        <footer class="gh-card-footer">
+                                            <span class="gh-card-author">Gabriel Kiarie</span>
+                                            <time class="gh-card-date" datetime="2022-03-08">Jan 31, 2021</time>
+                                        </footer>
+                                    </div>
+                                </a>
+                            </article>
+
+                        </div>
+                    </div>
+                    <footer class="gh-topic-footer">
+                        <a class="gh-topic-link" href="../blogs.html">Show more <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></a>
+                    </footer>
+                </div> -->
+                
+                    
+            </main>
+
+            <footer class="gh-foot gh-outer">
+                <div class="gh-foot-inner gh-inner">
+                    <div class="footer-section about">
+                        <h2 class="logo-text">Let's Connect</h2>
+                        <div class="contact">
+                            <span><i class="fas fa-phone">&nbsp; +254799513714</i></span>
+                            <span><i class="fas fa-envelope">&nbsp; victormoses998@gmail.com</i></span>
+                        </div>
+                        <div class="social">
+                            a href="https://www.linkedin.com/in/kulankashvictor/"><i class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/kulankashvictor/"><i class="fab fa-github"></i></a>
+                        </div>
+
+                        <div class="gh-copyright">
+                             <a href="https://KulankashVictor.github.io/"  rel="noopener">Victor Kulankash © 2023.</a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <script src="../../assets/built/main.min.js"></script>
+    </body>
+</html>
