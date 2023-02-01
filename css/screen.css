@@ -260,7 +260,8 @@ iframe
 
 .gh-site
 {
-    display:flex;flex-direction:column;
+    display:flex;
+    flex-direction:column;
     min-height:100vh
 }
 
@@ -277,6 +278,7 @@ iframe
 {
     padding-left:var(--gap);
     padding-right:var(--gap)
+
 }
 
 
