@@ -41,7 +41,7 @@
                     <div class="gh-head-brand">
                         <div class="gh-head-brand-wrapper">
                             <a class="gh-head-logo" href="https://kulankashvictor.github.io/">
-                                Measurement of Joint flexion angles using a Human Pose Model running on Nvidia Jetson Nano
+                                Knee Joint flexion angle Measurement using a Human Pose Model running on Nvidia Jetson Nano
                             </a>
                         </div>
                         <button class="gh-burger"></button>
@@ -291,7 +291,7 @@
                         <div class="blog-image blog-image2">
                             <img src="img/logitech.webp" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 3: The Webcam </p>
+                        <p class="caption"> Figure 2: The Webcam </p>
 
                         <h3>Software Description</h3>
                         <p>
@@ -331,7 +331,7 @@
                         <div class="blog-image blog-image2">
                             <img src="img/wearablepipeline.png" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 3: The wearable device implementation architecture. </p>
+                        <p class="caption"> Figure 4: The wearable device implementation architecture. </p>
 
                         
                         <h3>Hardware Description</h3>
@@ -351,7 +351,7 @@
                         <div class="blog-image blog-image2">
                             <img src="img/arduinoble.webp" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 2: The Arduino Nano BLE Sense </p>
+                        <p class="caption"> Figure 5: The Arduino Nano BLE Sense </p>
 
                         <h3>Software Description</h3>
     
@@ -370,7 +370,7 @@
                         <div class="blog-image blog-image2">
                             <img src="img/wearablepipeline.png" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 4: System architecture of the wearable device</p>
+                        <p class="caption"> Figure 6: System architecture of the wearable device</p>
                         
     
                                                 
@@ -378,7 +378,7 @@
                         <h2 id="results"> Results of Deployment</h2>
     
                         <p>
-                            The two implementations were put to the test and the flexion angles obtained from the two methodologies were compared as shown in figures 7, 8, 9, and 10. 
+                            The two implementations were put to the test and the flexion angles obtained from the two methodologies were compared as shown in figures 7, 8 and 9. 
                             The knee brace embedded with the wearable device is worn by a subject and at the same time the subject positions himself within 
                             the webcam's range of view to measure the knee flexion angle simultaneously using both implementations.
                             We focused on three main positions of knee flexion; standing, seating, and squatting. The knee flexion angles obtained by both 
@@ -389,17 +389,17 @@
                         <div class="blog-image blog-image2">
                             <img src="img/flexionstanding.png" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 3: Flexion angle when standing. </p>
+                        <p class="caption"> Figure 7: Flexion angle when standing. </p>
 
                         <div class="blog-image blog-image2">
                             <img src="img/flexstandingtositting.png" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 4: Flexion Angle from standing to sitting. </p>
+                        <p class="caption"> Figure 8: Flexion Angle from standing to sitting. </p>
 
                         <div class="blog-image blog-image2">
                             <img src="img/flexdynamic.png" alt="Responsive image">
                         </div>
-                        <p class="caption"> Figure 3: Flexion angles when in dynamic motion </p>
+                        <p class="caption"> Figure 9: Flexion angles when in dynamic motion </p>
     
                         <h2 id="conclusion"> Conclusion</h2>
     
@@ -408,8 +408,7 @@
                             wearable device and the human pose model. Fig 7 is a graph showing the comparison of the two readings 
                             while the subject is standing upright. As expected there is near zero flexion from both readings because 
                             flexion of the joint is zero when the leg is fully extended. Fig 8 shows the results of the transition from 
-                            a standing position to a sitting position while  Fig 9 is a graph showing transition from a sitting position 
-                            to squatting (maximum flexion) and then back to the sitting position. When seated the expected angle of knee 
+                            a standing position to a sitting position. When seated the expected angle of knee 
                             flexion is around 80° - 90° and when squatting the expected angle of flexion is about 130° - 140°. 
                             The final graph Fig 10 shows the comparison across the various positions tested on by both the wearable 
                             device and the human pose model. The slight deviations observed can be attributed to approximation errors by 
@@ -419,7 +418,17 @@
 
                         </p>
 
-                        <h3>References</h3>
+                        <h2 id="Optimization"> Further Optimization</h2>
+                        <p>
+                            Further optimization can be done on the implementation of a human pose model for angle measurement and the implementation of a wearable device
+                            for joint angle approximation.
+                            In this project the MediaPipe machine learning framework is used while there exists posibilities to use other frameworks like Nvidia TRT pose framework
+                            and the OpenPose machine learning framework. As for the wearable device measuring the flexion angle using the flex sensor we could also get
+                            the flexion angle using IMU sensors which use a combination of gyroscope, accelerometer and magnetometer to extract the relative angle between two 
+                            reference points for more accurate angle measurement.
+                        </p>
+
+                        <h2>References</h2>
                     
                         <p>
                             <a id="ref1"><strong>[1]</strong></a> D'Lima DD, Fregly BJ, Patil S, Steklov N, Colwell CW Jr. Knee joint forces: prediction, measurement, and significance. 
@@ -440,11 +449,13 @@
                         </p>
 
                         <p>
-                            <a id="ref2"><strong>[2]</strong></a>
+                            <a id="ref4"><strong>[4]</strong></a>Allan, A. (2018) Introducing the Nvidia jetson nano, Hackster.io. Hackster.io. 
+                            Available at:https://www.hackster.io/news/introducing-the-nvidia-jetson-nano-aaa9738ef3ff (Accessed: October 17, 2022). 
+
                         </p>
 
 
-                        <h3>Publications</h3>
+                        <h3>Publications(Under Review)</h3>
 
                         <p>
                             <strong>[1]</strong> V. Kulankash, A. Gitau, C. Maina "Comparison of Wearable and Computer Vision Based Approaches
