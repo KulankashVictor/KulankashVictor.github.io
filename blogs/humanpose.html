@@ -145,9 +145,7 @@
                             Computer vision is one of the main fields in Deep Learning and AI applications. There has been 
                             a lot of work and research done in computer vision in the recent past and this has seen its applications 
                             in various systems be it in object detection and classification (Tesla's self-driving AI), image segmentation, 
-                            face recognition (Facebook's DeepFace), Human Pose Estimation, among others, all of which utilize 
-                            Convolutional Neural Networks given the advantage that CNNs have in their unique capability of automatically
-                            learning features based on a given labeled dataset.
+                            face recognition (Facebook's DeepFace), Human Pose Estimation, among others.
                         </p>
 
                         <p>
@@ -178,24 +176,25 @@
                         <p>
                             Currently, surgeons use <a href="https://www.ncbi.nlm.nih.gov/books/NBK558985/"
                             target="_blank">Goniometers</a> and estimated passive observation to obtain 
-                            the knee joint's postoperative Range of Motion (ROM). Goniometers have shortcomings among them being highly prone to 
+                            the knee joint's postoperative Range of Motion (ROM) <a href="ref1">[1].</a> Goniometers have shortcomings among them being highly prone to 
                             human errors and being more invasive as too much contact is needed with the patient. 
                             Other modern technologies used to conduct gait analysis and joint flexion measurements are expensive. 
                             For example, ProtoKinetics, which is based in the US, have developed a Gait Analysis Software and have patented
-                            the Zeno Walkway Gait Analysis System [8] capable of providing meaningful data to clinicians and researchers, 
+                            the Zeno Walkway Gait Analysis System [2] capable of providing meaningful data to clinicians and researchers, 
                             although at an expensive fee due to the cost of development of their system and integration of expensively acquired 
                             pressure and precision camera sensors. However, such solutions are hard to access especially for specialists and patients
                             in low and middle-income countries (LMICs). As such, a need arises to develop effective but cost-friendly 
-                            and less invasive solutions that can accurately measure the joint flexion angle.
+                            and less invasive solutions that can accurately measure the joint flexion angle by utilizing modern technologies like AI.
                         </p>
                         
                         <p>
                             In this research, we develop two methods of approximating the knee flexion angles and then conduct a comparative analysis
                             of the two implementations with the aim of validating their performance. The wearable device estimates knee flexion angle
-                            using an Arduino Nano 33 BLE Sense and a flex sensor powered by a 3.7V LiPo battery. 
-                            The device is connected to a computer via Bluetooth Low Energy (BLE). The measured angle is recorded 
+                            using an Arduino Nano 33 BLE Sense and a flex sensor powered by a 3.7V LiPo battery [3]. 
+                            The device is connected to the Jetson Nano via Bluetooth Low Energy (BLE). The measured angle is recorded 
                             in a real-time database, InfluxDB, from which we read and display the angles in a gauge plot hosted on a dash application. 
-                            The second implementation involves utilizing a machine learning framework called MediaPipe that is optimized 
+                            The second implementation involves utilizing a machine learning framework called <a href="https://viso.ai/computer-vision/mediapipe"
+                            target="_blank">MediaPipe</a>  that is optimized 
                             for real-time tracking of the human pose and features. The human pose model takes a live video stream as the input data 
                             from a webcam and then identifies 32 mappable joints of the human frame. The model then appends a skeletal structure to 
                             the mapped joints and tracks the position of each joint on each subsequent frame of the input video stream. 
@@ -423,15 +422,25 @@
                         <h3>References</h3>
                     
                         <p>
-                            <a id="ref1"><strong>[1]</strong></a> C. Desjonquères, S. Linke and T. Gifford, "Passive 
-                            acoustic monitoring as a potential tool to survey animal and ecosystem processes in 
-                            freshwater environments,"<em> Freshwater Biology, vol. 65, no. 1, pp. 7--19,</em> 2020.
+                            <a id="ref1"><strong>[1]</strong></a> D'Lima DD, Fregly BJ, Patil S, Steklov N, Colwell CW Jr. Knee joint forces: prediction, measurement, and significance. 
+                            Proc Inst Mech Eng H. 2012 Feb;226(2):95-102. DOI: 10.1177/0954411911433372. 
+                            PMID: 22468461; PMCID: PMC3324308.https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3324308/
                         </p> 
                         
 
                         <p>
-                            <a id="ref2"><strong>[2]</strong></a>C. wa Maina, "Listening to the Mountain: Using Audio 
-                            Recorders to Monitor Forest Birds in Kenya, Nyeri,"<em> Medium,</em> 2017.
+                            <a id="ref2"><strong>[2]</strong></a>Gait analysis software and assessment systems " Protokinetics (2022) ProtoKinetics. 
+                            Available at: https://www.protokinetics.com/ (Accessed: October 14, 2022).
+                        </p>
+
+                        <p>
+                            <a id="ref3"><strong>[3]</strong></a>(2022) MediaPipe Pose. Google LLC. 
+                            Available at: https://google.github.io/mediapipe/solutions/pose.html (Accessed: October 4, 2022).
+
+                        </p>
+
+                        <p>
+                            <a id="ref2"><strong>[2]</strong></a>
                         </p>
 
 
@@ -440,7 +449,7 @@
                         <p>
                             <strong>[1]</strong> V. Kulankash, A. Gitau, C. Maina "Comparison of Wearable and Computer Vision Based Approaches
                             to Knee Flexion Angle Measurement" 
-                            <em>in 2022 IST-Africa Conference (IST-Africa),</em> 2022. <a class="pub-link" href="https://ieeexplore.ieee.org/">View</a>
+                            <em>in 2022 IST-Africa Conference (IST-Africa),</em> 2022. <a class="pub-link" href="https://ist-africa.org/conference2023/">View</a>
                         </p>
 
                         
