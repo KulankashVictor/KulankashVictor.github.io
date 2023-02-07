@@ -347,6 +347,7 @@ iframe
 .gh-head-inner
 {
     align-items:center;
+    text-align: left;
     -moz-column-gap:var(--head-nav-gap);
     column-gap:var(--head-nav-gap);
     display:grid;
@@ -358,20 +359,24 @@ iframe
 
 .gh-head-brand
 {
-    line-height:1
+    line-height:1.2;
+    text-align: center;
 }
 
 .gh-head-brand-wrapper
 {
-    align-items:center;
-    display:flex;flex:1
+    
+    display:flex;
+    flex:1
 }
 
 
 .gh-head-logo
 {
-    font-size:2.9rem;
-    font-weight:700;
+    
+    justify-content: center;
+    align-items: center;
+    font-weight:900;
     letter-spacing:-.02em;
     color: #000;
 }
@@ -387,7 +392,7 @@ iframe
 {
     align-items:center;
     display:flex;
-    font-size:2.1rem
+    font-size:2.5rem
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -2315,7 +2320,8 @@ figcaption
 .gh-head-description,.nav
 {
     letter-spacing:-.006em;
-    font-weight: bold;
+    text-align: left;
+    font-weight: bold
 }
 
 
@@ -3331,7 +3337,8 @@ body:not(.home-template) .gh-topic-grid .gh-topic-content
     
     .gh-head-inner
     {
-        font-size:1.4rem;
+        font-size:2.4rem;
+        text-align: left;
         font-weight:500;
         padding:0
     }
@@ -3346,7 +3353,7 @@ body:not(.home-template) .gh-topic-grid .gh-topic-content
     {
         align-items:center;
         display:flex;
-        height:80px
+        height:150px
     }
     
     .is-head-b--a_n .gh-head-logo
